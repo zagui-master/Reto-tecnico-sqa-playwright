@@ -25,7 +25,7 @@ class ActionsManager {
   async choseProduct(locator: Locator) {
     const allProducts = await locator.all();
     const getRandomNumber = Math.floor(Math.random() * allProducts.length);
-    const product = allProducts[0];
+    const product = allProducts[getRandomNumber];
     await product.click();
   }
 }
